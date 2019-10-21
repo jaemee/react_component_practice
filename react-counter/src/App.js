@@ -17,13 +17,16 @@ class App extends React.Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
-          <button onClick={() => {this.setState({number: this.state.number+1})}}>+</button>
+          <button onClick={this.incrementNum}>+</button>
           <p>{this.state.number}</p>
-          <button onClick={() => {this.setState({number: this.state.number-1})}}>-</button>
+          <button onClick={this.decrementNum}>-</button>
         </header>
       </div>
     );
   }
+
+  incrementNum = ()  => {this.setState({number: this.state.number+1})}
+  decrementNum = () => {this.setState({number: this.state.number-1})}
 }
 
 export default App;
