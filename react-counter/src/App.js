@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import CounterWithReduxState from './components/counter/CounterWithReduxState'
+
 
 class App extends React.Component {
   constructor(props) {
@@ -17,16 +19,14 @@ class App extends React.Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
-          <button onClick={this.incrementNum}>+</button>
-          <p>{this.state.number}</p>
-          <button onClick={this.decrementNum}>-</button>
+          <CounterWithReduxState />
         </header>
       </div>
     );
   }
 
-  incrementNum = ()  => {this.setState({number: this.state.number+1})}
-  decrementNum = () => {this.setState({number: this.state.number-1})}
+  // incrementNum = ()  => {this.setState({number: this.state.number+1})}
+  // decrementNum = () => {this.setState({number: this.state.number-1})}
 }
 
 export default App;
