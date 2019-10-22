@@ -24,5 +24,11 @@ export const divide = () => {
     return {
         type: 'DIVIDE'
     }
-        
+
+}
+
+export const reset = () => {
+    return {
+        type: 'RESET'
+    }
 }
